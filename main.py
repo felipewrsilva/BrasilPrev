@@ -1,9 +1,9 @@
-from classes.dice import Dice
-from classes.player import Player
+from board import Board
+from classes.house import House
 
 def main():
-    side = Dice.roll()
-    print(side)
+    board = Board()
+    board.get_properties()
 
 if __name__ == "__main__":
     main()
