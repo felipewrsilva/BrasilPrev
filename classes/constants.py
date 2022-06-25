@@ -1,2 +1,3 @@
 class Constants:
-    QUANTITY = 20
+    HOUSES = 20
+    INITIAL_MONEY = 300

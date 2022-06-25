@@ -2,7 +2,7 @@ from classes.constants import Constants
 from classes.dice import Dice
 import random
 
-rent_percent = random.randint(3, 5)
+rent_percent = random.randint(50, 100) / 100
 
 class House:
     def __init__(self, position):
@@ -12,7 +12,7 @@ class House:
         self.owner = None
     
     def get_sale_cost(self):
-        return (self.position) * (Constants.QUANTITY/Dice.tendency())
-    
+        return Constants.INITIAL_MONEY / (Constants.HOUSES - (self.position - 1)) / Dice.tendency()
+
     def get_rent_cost(self):
-        return self.sale_cost * rent_percent / 100
+        return self.sale_cost * rent_percent
