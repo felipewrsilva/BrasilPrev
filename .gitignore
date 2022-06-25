@@ -184,3 +184,4 @@ cython_debug/
 
 # Ignore code-workspaces
 *.code-workspace
+.vs/*
