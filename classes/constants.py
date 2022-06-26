@@ -1,3 +1,20 @@
+import random
 class Constants:
     HOUSES = 20
-    INITIAL_MONEY = 300
+
+    DICE_MIN = 1
+    DICE_MAX = 6
+    
+    SALE_COST_MIN = 10
+    SALE_COST_MAX = 1000
+    RENT_PERCENT_MIN = 50
+    RENT_PERCENT_MAX = 100
+    RENT_PERCENT = random.randint(RENT_PERCENT_MIN, RENT_PERCENT_MAX) / 100
+    
+    INITIAL_BALANCE = 300
+    PLAYER_CAUTIOUS = 'Cautious'
+    PLAYER_CAUTIOUS_CONDITION = 80
+    PLAYER_IMPULSIVE = 'Impulsive'
+    PLAYER_RANDOM = 'Random'
+    PLAYER_DEMANDING = 'Demanding'
+    PLAYER_DEMANDING_CONDITION = 50
