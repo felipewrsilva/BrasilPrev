@@ -19,6 +19,7 @@ class Game:
     def round(self):
         for player in self.players:
             self.set_new_position(player)
+            self.buy_or_rent(player)
             self.check_player_balance(player)
             print(player.type, player.balance)
 

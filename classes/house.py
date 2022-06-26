@@ -16,10 +16,10 @@ class House:
     
     def buy(self, owner):
         self.owner = owner
-        owner.balance -= self.sale_cost
+        owner.balance = owner.balance - self.sale_cost
     
     def rent(self, owner):
-        owner.balance -= self.get_rent_cost
+        owner.balance = owner.balance - self.rent_cost
         if (self.owner != None):
-            self.owner.balance += self.get_rent_cost
+            self.owner.balance += self.rent_cost
         
