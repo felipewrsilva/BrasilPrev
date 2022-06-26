@@ -6,12 +6,15 @@ class Simulation:
     def __init__(self):
         self.quantity = Constants.SIMULATIONS_QUANTITY
         self.winner = ['', 0]
-        for _ in range(self.quantity):
-            Game()
+        self.play_games()
         self.output_time_out()
         self.output_average()
         self.output_percentage()
         self.output_winner()
+
+    def play_games(self):
+        for _ in range(self.quantity):
+            Game()
 
     def output_time_out(self):
         print(Constants.OUTPUT_TIME_OUT)
