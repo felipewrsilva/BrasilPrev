@@ -1,7 +1,7 @@
-from classes.game import Game
+from classes.simulation import Simulation
 
 def main():
-    Game()
+    Simulation()
 
 if __name__ == "__main__":
     main()
