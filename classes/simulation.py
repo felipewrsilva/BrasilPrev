@@ -4,18 +4,30 @@ from classes.score import Score
 
 class Simulation:
     def __init__(self):
-        quantity = Constants.SIMULATIONS_QUANTITY
-        for _ in range(quantity):
+        self.quantity = Constants.SIMULATIONS_QUANTITY
+        self.winner = ['', 0]
+        for _ in range(self.quantity):
             Game()
+        self.output_time_out()
+        self.output_average()
+        self.output_percentage()
+        self.output_winner()
+
+    def output_time_out(self):
         print(Constants.OUTPUT_TIME_OUT)
         print(Score.time_out)
+
+    def output_average(self):
         print(Constants.OUTPUT_AVERAGE)
-        print(f'{Score.rounds/quantity:.2f}')
+        print(f'{Score.rounds/self.quantity:.2f}')
+
+    def output_percentage(self):
         print(Constants.OUTPUT_PERCENTAGE)
-        winner = ['', 0]
-        players = Score.players
-        for p in players:
-            print(f'{p}: {players[p]/quantity:.2f}')
-            winner = [p, players[p]]
+        for p in Score.players:
+            print(f'{p}: {Score.players[p]/self.quantity:.2f}')
+
+    def output_winner(self):
         print(Constants.OUTPUT_WINNER)
-        print(winner[0])
+        for p in Score.players:
+            self.winner = [p, Score.players[p]]
+        print(self.winner[0])
