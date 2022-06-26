@@ -3,17 +3,18 @@ from classes.constants import Constants
 
 class Board:
     def __init__(self):
-        self.properties = []
-        self.set_properties()
+        self.houses = []
+        self.set_houses()
         self.sum = 0
     
-    def set_properties(self):
-        for position in range(Constants.HOUSES):
-            property = House(position + 1)
-            self.properties.append(property)
+    def set_houses(self):
+        for _ in range(Constants.HOUSES):
+            house = House()
+            self.houses.append(house)
 
-    def get_properties(self):
-        for p in self.properties:
+    def get_houses(self):
+        for p in self.houses:
             self.sum += p.rent_cost
             print(f'{p.position:02d} - {p.sale_cost:06.2f} - {p.rent_cost:05.2f}')
-        
+    
+    
