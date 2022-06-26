@@ -1,9 +1,7 @@
-from classes.board import Board
+from classes.game import Game
 
 def main():
-    board = Board()
-    board.get_properties()
-    print(f'{board.sum:06.2f}')
+    Game()
 
 if __name__ == "__main__":
     main()
